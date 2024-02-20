@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>App</title>
+    <title>HabitCraft</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header>
-        <h1>App</h1>
+        <h1>HabitCraft</h1>
     </header>
     <section class="timer-container">
         <div id="count-container">
-            <button class="options">Stopwatch</button>
+            <button class="options selected">Stopwatch</button>
             <button class="options">Break</button>
+            <button class="options">Check as a habit</button>
             <div id="watch-container">
                 <button>+</button>
                 <button>-</button>
@@ -25,7 +26,14 @@
         </div>
     </section>
     <section class="habit-tracker-container">
-
+        <h2>Habit tracker</h2>
+        <div id="habit-container">
+            <h3>Habit x</h3>
+            <div class="habit-grid-container">
+                <!-- Rellenar con tantos de estos divs como días haya en el año actualmente y scrollear al final, para llegar al día actual -->
+                <div class="day"></div>
+            </div>
+        </div>
     </section>
     <footer></footer>
 </body>

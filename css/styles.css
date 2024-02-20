@@ -1,21 +1,22 @@
 
 html {
-    background-color: white;
+    background-color: #131320;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-    height: 100vh;
-    width: 80%;
-    background-color: antiquewhite;
+    min-height: 100vh;
+    width: 100%;
     margin: auto;
-    padding: 10px 25px;
+    padding: 10px;
 }
 
 * {
     box-sizing: border-box;
 }
 
-h1, h2 {
+h1, h2, h3 {
     margin: 0;
 }
 
@@ -28,7 +29,7 @@ section div {
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
-    padding: 20px 0;
+    padding-top: 15px;
 }
 
 #watch-container {
@@ -41,16 +42,55 @@ section div {
 #watch {
     width: 200px;
     height: 200px;
-    background-color: aquamarine;
+    background-color: #bae8e8;
     border-radius: 100%;
-    margin: 10px 0;
+    margin-top: 10px;
 }
 
 .options, #watch-container button {
     width: 50%;
+    min-width: fit-content;
+    outline: none;
+    border: none;
+    padding: 5px;
+    margin: 5px 0;
+    border-radius: 3px;
+    background-color: transparent;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+#watch-container button {
+    border: 2px solid #bae8e8;
+    width: 30%;
+}
+
+.options.selected {
+    background-color: #bae8e8;
+    color: black;
 }
 
 #acc-time p {
     text-align: center;
     margin: 0;
+}
+
+.habit-grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 15px);
+    grid-template-rows: repeat(7, 15px);
+    grid-auto-flow: column;
+    overflow: auto;
+    gap: 2px;
+    justify-content: center;
+    padding: 5px;
+    width: auto;
+    transform: scale(-1, 1);
+}
+
+.day {
+    width: 15px;
+    height: 15px;
+    background-color: red;
+    border-radius: 3px;
 }
