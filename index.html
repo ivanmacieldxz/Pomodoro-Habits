@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HabitCraft</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script src="src/timer.js" defer></script>
+    <script src="src/pomodoro-buttons.js" defer></script>
 </head>
 <body>
     <header>
@@ -12,17 +14,24 @@
     </header>
     <section class="timer-container">
         <div id="count-container">
-            <button class="options selected">Stopwatch</button>
+            <button class="options selected">Timer</button>
+            <button class="options">Stopwatch</button>
             <button class="options">Break</button>
-            <button class="options">Check as a habit</button>
+            <label id="habit-checker-button">
+                Check as a habit
+                <input type="checkbox" id="habit-checker">
+            </label>
             <div id="watch-container">
                 <button>+</button>
                 <button>-</button>
-                <div id="watch"></div>
+                <div id="watch">
+                    <p id="time"></p>
+                    <button id="start-pause">Start</button>
+                </div>
             </div>
         </div>
         <div id="acc-time">
-            <p>Tiempo acumulado: <span></span></p>
+            <p>Focused time: <span></span></p>
         </div>
     </section>
     <section class="habit-tracker-container">

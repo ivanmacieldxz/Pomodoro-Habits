@@ -43,11 +43,31 @@ section div {
     width: 200px;
     height: 200px;
     background-color: #bae8e8;
-    border-radius: 100%;
+    border-radius: 10%;
     margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: center;
+    align-items: center;
 }
 
-.options, #watch-container button {
+#time {
+    font-size: 48px;
+    color: #131320;
+    text-align: center;
+    width: 100%;
+}
+
+#watch-container #start-pause {
+    margin: 0;
+    background-color: #131320;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.options, #watch-container button, #habit-checker-button {
+    text-align: center;
     width: 50%;
     min-width: fit-content;
     outline: none;
@@ -58,6 +78,7 @@ section div {
     background-color: transparent;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: white;
+    font-size: 13px;
 }
 
 #watch-container button {
@@ -65,10 +86,15 @@ section div {
     width: 30%;
 }
 
-.options.selected {
+.options.selected, #habit-checker-button.selected {
     background-color: #bae8e8;
     color: black;
 }
+
+#habit-checker {
+    display: none;
+}
+
 
 #acc-time p {
     text-align: center;
