@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HabitCraft</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script src="src/timer.js" defer></script>
     <script src="src/pomodoro-buttons.js" defer></script>
 </head>
@@ -22,12 +25,14 @@
                 <input type="checkbox" id="habit-checker">
             </label>
             <div id="watch-container">
-                <button>+</button>
-                <button>-</button>
+                <button class="increaser-decreaser">+</button>
+                <button class="increaser-decreaser">-</button>
                 <div id="watch">
                     <p id="time"></p>
-                    <button id="start-pause">Start</button>
-                </div>
+                    <button class="watch-buttons" id="start">Start</button>
+                    <button class="watch-buttons" id="pause">Pause</button>
+                    <button class="watch-buttons" id="restart">Restart</button>
+               </div>
             </div>
         </div>
         <div id="acc-time">

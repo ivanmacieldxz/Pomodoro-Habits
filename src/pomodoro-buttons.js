@@ -25,35 +25,34 @@ habitChecker.addEventListener("click", () => {
 });
 
 //timer buttons
-let timeButtons = [].slice.call(document.querySelectorAll("#watch-container button"));
-let timerButton = timeButtons[2];
-timeButtons.splice(-1);
+let timeButtons = document.querySelectorAll(".increaser-decreaser");
 
-let increasing = false;
-let decreasing = false;
-let buttonTimeout;
+//interval to manage when button keeps pressed
+let buttonInterval;
 
+//add time button
 timeButtons[0].addEventListener("mousedown", () => {
-    clearTimeout();
-    buttonTimeout = setTimeout(increaseTime, 500)
+    increaseTime();
+    buttonInterval = setInterval(increaseTime, 400)
 });
 
 timeButtons[0].addEventListener("mouseup", () => {
-    clearTimeout();
+    removeBtnInterval();
 });
 
+//decrease time button
 timeButtons[1].addEventListener("mousedown", () => {
-    clearTimeout();
-    buttonTimeout = setTimeout(decreaseTime, 500);
+    decreaseTime();
+    buttonInterval = setInterval(decreaseTime, 400);
 });
 
-timeButtons[0].addEventListener("mouseup", () => {
-    clearTimeout();
+timeButtons[1].addEventListener("mouseup", () => {
+    removeBtnInterval();
 });
 
-function clearTimeout() {
-    if (buttonTimeout)
-        clearTimeout(buttonTimeout);
+function removeBtnInterval() {
+    if (buttonInterval)
+        clearInterval(buttonInterval);
 }
 
 function increaseTime() {
@@ -65,3 +64,10 @@ function decreaseTime() {
     timer.decreaseMinutes();
     timer.updateWatch();
 }
+
+//timer function buttons events
+start.addEventListener("click", timer.start);
+
+pause.addEventListener("click", timer.pause);
+
+restart.addEventListener("click", timer.restart)

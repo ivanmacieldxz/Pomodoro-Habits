@@ -2,7 +2,12 @@
 html {
     background-color: #131320;
     color: white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
 }
 
 body {
@@ -14,6 +19,7 @@ body {
 
 * {
     box-sizing: border-box;
+    font-family: inherit;
 }
 
 h1, h2, h3 {
@@ -42,7 +48,6 @@ section div {
 #watch {
     width: 200px;
     height: 200px;
-    background-color: #bae8e8;
     border-radius: 10%;
     margin-top: 10px;
     display: flex;
@@ -54,14 +59,12 @@ section div {
 
 #time {
     font-size: 48px;
-    color: #131320;
     text-align: center;
     width: 100%;
 }
 
-#watch-container #start-pause {
+#watch-container .watch-buttons {
     margin: 0;
-    background-color: #131320;
     text-align: center;
     border-radius: 10px;
 }
@@ -76,7 +79,6 @@ section div {
     margin: 5px 0;
     border-radius: 3px;
     background-color: transparent;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: white;
     font-size: 13px;
 }
