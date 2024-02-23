@@ -43,15 +43,15 @@ class Timer {
                 }
             } else {
                 this.decreaseSeconds();
-
-                //if gets to 00:00 after decreasing
-                if (this.minutes == 0 && this.seconds == 0) {
-                    //clear and alert before next iteration
-                    clearInterval(interval);
-                    alert("ended");
-                }
             }
             this.updateWatch();
+
+            //if gets to 00:00 after decreasing
+            if (this.minutes == 0 && this.seconds == 0) {
+                //clear and alert before next iteration
+                clearInterval(interval);
+                alert("ended");
+            }
         }, 1000);
 
         return interval;
