@@ -70,4 +70,4 @@ start.addEventListener("click", timer.start);
 
 pause.addEventListener("click", timer.pause);
 
-restart.addEventListener("click", timer.restart)
+reset.addEventListener("click", timer.reset)
