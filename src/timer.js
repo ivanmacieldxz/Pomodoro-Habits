@@ -1,14 +1,17 @@
 
 class Timer extends Watch {
 
+    #setting
+
     constructor(minutes, watch) {
         super(watch);
-        this.minutes = minutes;
+        this.#setting = minutes;
+        this.minutes = this.#setting;
     }
 
     start = () => {
         //moment when timer shall end
-        let countDownDate = Date.now() + this.minutes * 60 * 1000;
+        let countDownDate = Date.now() + this.minutes * 60 * 1000 + this.seconds * 1000;
         
 
         this._interval = setInterval(() => {
@@ -23,21 +26,28 @@ class Timer extends Watch {
 
             this.updateWatch();
 
-            console.log(distance);
-            if (distance == 0) {
+            if (this.seconds == 0 && this.minutes == 0) {
                 clearInterval(this._interval);
-                alert("congrats!")
+                console.log("congrats!");
             }
 
         }, 250);
     }
 
-    pause() {
-        
+    pause = () => {
+        if (this.paused) {
+            this.start();
+        } else {
+            clearInterval(this._interval);
+        }
+        this.paused = !this.paused;
     }
 
     reset = () => {
         clearInterval(this._interval);
+        this.minutes = this.#setting;
+        this.seconds = 0;
+        this.updateWatch();
     }
 }
 
