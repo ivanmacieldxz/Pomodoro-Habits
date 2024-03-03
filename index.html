@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sp">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,46 +8,38 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <script src="src/watch.js" defer></script>
-    <script src="src/timer.js" defer></script>
-    <script src="src/pomodoro-buttons.js" defer></script>
+    <script src="src/main.js" defer></script>
 </head>
 <body>
     <header>
-        <h1>HabitCraft</h1>
+        <div id="title">
+            <h1>HabitCraft</h1>
+        </div>
+        <nav>
+            <button id="pomoButton">Pomodoro</button>
+            <button id="trackerButton">Tracker</button>
+        </nav>
     </header>
-    <section class="timer-container">
-        <div id="count-container">
-            <button class="options selected">Timer</button>
-            <button class="options">Stopwatch</button>
-            <button class="options">Break</button>
-            <label id="habit-checker-button">
-                Check as a habit
-                <input type="checkbox" id="habit-checker">
-            </label>
-            <div id="watch-container">
-                <button class="increaser-decreaser">+</button>
-                <button class="increaser-decreaser">-</button>
-                <div id="watch">
-                    <p id="time"></p>
-                    <button class="watch-buttons" id="start">Start</button>
-                    <button class="watch-buttons" id="pause">Pause</button>
-                    <button class="watch-buttons" id="reset">Reset</button>
-               </div>
+    <section id="content">
+        <div class="mode" id="pomodoro">
+            <div id="optionsContainer">
+                <button class="pomodoroOptions">Timer</button>
+                <button class="pomodoroOptions">Break</button>
+                <button class="pomodoroOptions">Stopwatch</button>
+                <label id="checkerLabel"><input type="checkbox" id="checker">Check as a habit</label>
+            </div>
+            <div id="watchContainer">
+                <button class="watchButton" id="increase">+</button>
+                <button class="watchButton" id="decrease">-</button>
+                <p id="watch">00:00</p>
+                <button class="watchButton" id="start">Start</button>
+                <button class="watchButton" id="pause">Pause</button>
+                <button class="watchButton" id="reset">Reset</button>
+                <p>Accumulated time: <span id="timeRecord"></span></p>
             </div>
         </div>
-        <div id="acc-time">
-            <p>Focused time: <span></span></p>
-        </div>
-    </section>
-    <section class="habit-tracker-container">
-        <h2>Habit tracker</h2>
-        <div id="habit-container">
-            <h3>Habit x</h3>
-            <div class="habit-grid-container">
-                <!-- Rellenar con tantos de estos divs como días haya en el año actualmente y scrollear al final, para llegar al día actual -->
-                <div class="day"></div>
-            </div>
+        <div class="mode hidden" id="tracker">
+            on tracker mode
         </div>
     </section>
     <footer></footer>

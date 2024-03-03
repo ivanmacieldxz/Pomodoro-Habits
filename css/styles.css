@@ -1,124 +1,119 @@
 
 html {
-    background-color: #131320;
-    color: white;
     font-family: "Noto Sans", sans-serif;
     font-optical-sizing: auto;
     font-weight: normal;
     font-style: normal;
     font-variation-settings:
         "wdth" 100;
+    font-size: 13px;
 }
 
 body {
     min-height: 100vh;
-    width: 100%;
+    width: 100vw;
     margin: auto;
     padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 * {
     box-sizing: border-box;
     font-family: inherit;
+    font-size: inherit;
+}
+
+button {
+    border: none;
+    outline: none;
+    padding: 0;
 }
 
 h1, h2, h3 {
     margin: 0;
 }
 
-section div {
+header {
+    /* border: 1px solid black; */
+    display: flex;
+    padding-bottom: 10px;
+    width: inherit;
+    height: fit-content;
+}
+
+h1 {
+    font-size: 1.5rem;
+}
+
+#title {
     width: 100%;
 }
 
-#count-container {
+nav {
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    padding-top: 15px;
 }
 
-#watch-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 10px 0;
-}
-
-#watch {
-    width: 200px;
-    height: 200px;
-    border-radius: 10%;
-    margin-top: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    position: relative;
-    justify-content: center;
-    align-items: center;
-}
-
-#time {
-    font-size: 48px;
-    text-align: center;
-    width: 100%;
-}
-
-#watch-container .watch-buttons {
-    margin: 0;
-    text-align: center;
-    border-radius: 10px;
-}
-
-.options, #watch-container button, #habit-checker-button {
-    text-align: center;
-    width: 50%;
-    min-width: fit-content;
-    outline: none;
-    border: none;
-    padding: 5px;
-    margin: 5px 0;
-    border-radius: 3px;
+nav button {
+    padding: 0 5px;
     background-color: transparent;
-    color: white;
-    font-size: 13px;
 }
 
-#watch-container button {
-    border: 2px solid #bae8e8;
-    width: 30%;
+section {
+    border: 1px solid black;
+    height: fit-content;
 }
 
-.options.selected, #habit-checker-button.selected {
-    background-color: #bae8e8;
-    color: black;
-}
-
-#habit-checker {
+.hidden {
     display: none;
 }
 
-
-#acc-time p {
-    text-align: center;
-    margin: 0;
+label {
+    font-size: 1rem;
 }
 
-.habit-grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 15px);
-    grid-template-rows: repeat(7, 15px);
-    grid-auto-flow: column;
-    overflow: auto;
-    gap: 2px;
+#optionsContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.pomodoroOptions {
+    width: calc(100% / 3);
+}
+
+#checkerLabel {
+    width: 100%;
+    display: flex;
     justify-content: center;
-    padding: 5px;
-    width: auto;
-    transform: scale(-1, 1);
+    align-items: center;
 }
 
-.day {
-    width: 15px;
-    height: 15px;
-    background-color: red;
-    border-radius: 3px;
+#watchContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.watchButton {
+    width: 20%;
+    padding: 5px;
+}
+
+#increase, #decrease {
+    font-weight: 900;
+}
+
+#watchContainer p {
+    width: 100%;
+    text-align: center;
+}
+
+#watch {
+    font-size: 4rem;
+}
+
+footer {
+    background-color: aquamarine;
 }
