@@ -1,6 +1,6 @@
 
 //by default, set it on pomodoro mode
-setOnPomodoro();
+setOnTracker();
 
 pomoButton.addEventListener("click", () => {
     setOnPomodoro();

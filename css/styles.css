@@ -34,6 +34,8 @@ h1, h2, h3 {
     margin: 0;
 }
 
+/* HEADER STYLES */
+
 header {
     /* border: 1px solid black; */
     display: flex;
@@ -60,9 +62,12 @@ nav button {
     background-color: transparent;
 }
 
+/* GENERAL SECTION STYLES */
+
 section {
     border: 1px solid black;
     height: fit-content;
+    width: 100%;
 }
 
 .hidden {
@@ -73,12 +78,14 @@ label {
     font-size: 1rem;
 }
 
+/* POMODORO SECTION STYLES */
+
 #optionsContainer {
     display: flex;
     flex-wrap: wrap;
 }
 
-.pomodoroOptions {
+.pomodoro-options {
     width: calc(100% / 3);
 }
 
@@ -114,6 +121,54 @@ label {
     font-size: 4rem;
 }
 
-footer {
-    background-color: aquamarine;
+/* HABIT SECTION STYLES */
+.habit {
+    background-color: gainsboro;
+    padding: 10px;
+}
+
+.habit-options {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.habit-name {
+    width: 100%;
+}
+
+.habit-option {
+    padding: 5px;
+    height: fit-content;
+    margin: 0 0 0 5px;
+}
+
+.habit-record {
+    display: grid;
+    gap: 3px;
+    overflow-x: scroll;
+    grid-template-rows: repeat(7, 10px);
+    grid-auto-flow: column;
+    padding-bottom: 5px;
+}
+
+.habit-record::-webkit-scrollbar {
+    height: 7px;
+    opacity: 0.1;
+}
+
+.habit-record::-webkit-scrollbar-thumb {
+    background-color: rgba(240, 248, 255, 0.75);
+}
+
+
+.day {
+    background-color: aliceblue;
+    padding: 5px;
+    border-radius: 2px;
+    opacity: 0.35;
+}
+
+.day.done {
+    opacity: 1;
 }
