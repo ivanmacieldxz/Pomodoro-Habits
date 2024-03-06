@@ -87,6 +87,7 @@ label {
 
 .pomodoro-options {
     width: calc(100% / 3);
+    padding: 5px;
 }
 
 #checkerLabel {

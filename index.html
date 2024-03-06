@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script src="src/main.js" defer></script>
+    <script src="src/pomodoro.js" defer></script>
 </head>
 <body>
     <header>
@@ -23,9 +24,9 @@
     <section id="content">
         <div class="" id="pomodoro">
             <div id="optionsContainer">
-                <button class="pomodoro-options">Timer</button>
-                <button class="pomodoro-options">Break</button>
-                <button class="pomodoro-options">Stopwatch</button>
+                <button class="pomodoro-options" id="timerButton">Timer</button>
+                <button class="pomodoro-options" id="breakButton">Break</button>
+                <button class="pomodoro-options" id="swButton">Stopwatch</button>
                 <label id="checkerLabel"><input type="checkbox" id="checker">Check as a habit</label>
             </div>
             <div id="watchContainer">
@@ -33,8 +34,9 @@
                 <button class="watchButton" id="decrease">-</button>
                 <p id="watch">00:00</p>
                 <button class="watchButton" id="start">Start</button>
-                <button class="watchButton" id="pause">Pause</button>
+                <button class="watchButton hidden" id="pause">Pause</button>
                 <button class="watchButton" id="reset">Reset</button>
+                <button class="watchButton" id="resetDefault">Default</button>
                 <p>Accumulated time: <span id="timeRecord"></span></p>
             </div>
         </div>
