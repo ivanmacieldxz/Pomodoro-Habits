@@ -151,6 +151,7 @@ label {
     grid-template-rows: repeat(7, 10px);
     grid-auto-flow: column;
     padding-bottom: 5px;
+    transform: scale(-1, 1);
 }
 
 .habit-record::-webkit-scrollbar {
